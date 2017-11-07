@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- 引入vue.cdn -->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- 容器一 -->
+	<h1>组件</h1>
+
+	<button v-on:click="click">改变one</button>
+	<div id="vue-app-one">
+		<greeting></greeting>
+	</div>
+
+	<!-- 容器二 -->
+	<button v-on:click="click2">改变two</button>
+	<div id="vue-app-two">
+			<greeting></greeting>
+	</div>
+</body>
+<script src="app.js"></script>
+</html>
+
+<!-- 
+color 随便改, colors为数组
+index代表数组下标 
+用template而不用div  在Elements里面没有div,只是h3和p标签
+-->
+
+
+
+
+
+
+
+
+
+
+

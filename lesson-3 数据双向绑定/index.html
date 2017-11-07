@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- 引入vue - CDN 只是cdn-->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- DOM标签的容器  -->
+	<div id="vue-app">
+		<h1>双向数据绑定</h1>
+
+		<!-- !!!应用于input select textarea -->
+		<!-- 键盘事件 -->
+		<label>name</label>
+		<input type="text" v-model="name">
+		<input type="text" v-on:keyup.enter="logName" v-bind:value="name" ref="name1">
+		<span>{{name}}</span>
+		<br>
+		<!-- 再输入的时候就调用函数 enter-->
+		<label>age</label>
+		<input type="text" v-model="age">
+		<input type="text" v-on:keyup.enter="logAge" v-bind:value="age" ref="age">
+		<span>{{age}}</span>
+		<!-- 再输入的时候就调用函数 alt+enter-->
+
+		
+		
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+	<!-- -->
+</body>
+</html>

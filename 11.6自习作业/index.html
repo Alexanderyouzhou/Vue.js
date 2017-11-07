@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	.line{
+		background: lightgreen;
+		height: 20px;
+	}
+	</style>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="vue-app">	
+	<button v-on:click="comclass">改变宽度</button>
+	<button v-on:click="comclass2">还原宽度</button>
+	<img v-if="width <= 250" v-bind:src="src1">
+	<img v-else v-bind:src="src">
+	<div class="line" v-bind:style="{ width:width + 'px' }"></div>
+</div>
+</body>
+<script type="text/javascript" src="app.js"></script>
+</html>

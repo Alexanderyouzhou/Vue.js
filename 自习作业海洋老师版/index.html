@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js 作业讲解</title>
+
+	<!-- 引入vue-CDN 标签里会用到vue -->
+	<script src="https://unpkg.com/vue"></script>
+	<!-- 引入css -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- DOM标签的容器 -->
+	<div id="vue-app">
+		<!-- image -->
+		<div id="bag" v-bind:class="{burst:ended}">
+			
+		</div>
+		<!-- bag health -->
+		<div id="bag-health">
+			<div v-bind:style="{width:health + '%'}"></div>
+		</div>
+		<!-- button control-->
+		<div id="controls">
+			<button v-show="!ended" v-on:click="punch">Punch</button>
+			<button v-on:click="restart">Restart</button>
+		</div>
+		
+
+
+
+		
+	</div>
+</body>
+<script src="app.js"></script>
+
+</html>

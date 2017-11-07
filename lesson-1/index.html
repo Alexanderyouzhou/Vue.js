@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<!-- 引入vue - CDN 只是cdn-->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- DOM标签的容器  -->
+	<div id="vue-app">
+		{{name}}
+		<!-- {{ }} 这个方法只能拿到字符串的值 -->
+		<h1>hello {{name}}</h1>
+		<!-- 也可以这么输出 -->
+		<p>{{job}}</p>
+		<p>{{greet(' afternoon')}}</p>
+		<!-- ;里面的afternoon 是实参 传参了 -->
+		<!-- 调用方法是一定要用小括号的 -->
+		<a v-bind:href="website">web开发</a>
+		<!-- 属性绑定   1.以v-开头的都是指令 -->
+
+		<p v-html="websiteTag"></p>	
+		<!-- 这个是传标签的 -->
+		<input v-bind:value="name">
+		<!-- 可以把v-bind干掉 -->
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+	<!-- 自己写的js -->
+</body>
+</html>

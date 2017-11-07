@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- 引入vue - CDN 只是cdn-->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- DOM标签的容器  -->
+	<div id="vue-app">
+		<h1>Events事件</h1>
+		<button v-on:click.once="addage(1)">加一岁</button>
+		<!-- ()可写可不写  就算不写他会先去方法里找 -->
+		<button v-on:click="subtractage(1)">减一岁</button>
+		<button v-on:dblclick="addage(10)">加十岁</button>
+		<!-- ()必须写  这里要传参 -->
+		<button v-on:dblclick="subtractage(10)">减十岁</button>
+		<p>我的年龄是{{age}}</p>
+		<!-- 鼠标事件========================================== -->
+
+		<div id="canvas" @mousemove="moveXY">
+			{{x}} , {{y}}
+			<span v-on:mousemove="stopPropagation">阻止冒泡时间</span><!-- 阻止冒泡事件 -->
+			<span v-on:mousemove.stop="">阻止冒泡时间</span><!-- 阻止冒泡事件 这样写的话在span标签里移动就不会改变mousemove-->
+			<!-- 这俩个办法都可以 -->
+		</div>
+
+			<a v-on:click.prevent="alert" href="http://www.baidu.com">百度一下</a>
+		<!-- prevent阻止默认时间 弹出数据但不跳转页面  这可以应用在submit中-->
+		<!-- 点击事件 -->
+
+
+		<!-- 键盘事件 -->
+		<label>name</label>
+		<input type="text" v-on:keyup.enter="logName">
+		<!-- 再输入的时候就调用函数 enter-->
+		<label>age</label>
+		<input type="text" v-on:keyup.alt.enter="logAge">
+		<!-- 再输入的时候就调用函数 alt+enter-->
+
+		
+		
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+	<!-- 自己写的js -->
+</body>
+</html>

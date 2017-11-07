@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- 引入vue - CDN 只是cdn-->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- DOM标签的容器  -->
+	<div id="vue-app">
+		<h1 id="">条件语句 v-if</h1>
+		<button v-on:click="error = !error">Toggle Error</button>
+		<button v-on:click="success = !success">Toggle success</button>
+		<p v-if="error">网络连接失败:404</p>
+		<p v-else-if="success">网络连接成功:200</p>
+
+
+		<!-- <p v-show="error">网络连接失败:404</p>
+		<p v-show="success">网络连接成功:200</p> -->
+			<!-- 动态css样式
+				v-bind:class: 用于绑定对应的样式对象(**一定得是对象()**) 
+				class对象值:有俩个值true和false
+				注意的是:经常改变样式的时候用computed-->
+
+
+
+		
+		
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+	<!-- -->
+</body>
+</html>

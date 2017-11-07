@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- 引入vue.cdn -->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- DOM标签的容器 -->
+	<div id="vue-app">
+	<h1>循环语句 v-for (important)</h1>
+	  <ul>
+	  	<li v-for="color in colors">{{color}}</li>
+	  </ul>
+	  <ul>
+	  	<li v-for="(user,index) in users">{{index+1}}. {{user.name}} - {{user.age}}</li>
+	  </ul> <hr>
+	  <template  v-for="(user,index) in users">
+        <h3>{{index+1}}.{{user.name}} </h3>
+        <p> {{user.age}} </p>
+	   </template> <hr>
+
+	  <template  v-for="(user,index) in users">
+        <div v-for = "(val,key) in user">
+        	<p>{{key}}-{{val}} </p>
+        </div>
+	   </template>
+	</div>
+</body>
+<script src="app.js"></script>
+</html>
+
+<!-- 
+color 随便改, colors为数组
+index代表数组下标 
+用template而不用div  在Elements里面没有div,只是h3和p标签
+-->
+
+
+
+
+
+
+
+
+
+
+

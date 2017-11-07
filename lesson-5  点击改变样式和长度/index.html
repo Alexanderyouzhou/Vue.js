@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- 引入vue - CDN 只是cdn-->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- DOM标签的容器  -->
+	<div id="vue-app">
+		<h1 id="">动态css样式</h1>
+		<h2>实例 1 </h2>
+			<!-- <div v-bind:class="{red:true,blue:true}"></div> -->
+			<!-- true的时候就会带dom中显示出他的class -->
+			<div v-on:click="changeColor = !changeColor" v-bind:class="{changeColor:changeColor}">
+				<span>henry</span>
+			</div>
+			
+		<h2>实例 2 </h2>
+			<button v-on:click="changeColor = !changeColor">
+			color</button>
+			<button v-on:click="changeWidth = !changeWidth">
+			width</button>
+			<br>
+			<!-- <div v-bind:class="{changeColor:changeColor,changeWidth:changeWidth}"><span>henry</span></div> -->
+
+			<div v-bind:class="compClasses"><span>henry</span></div>
+
+
+			<!-- 动态css样式
+				v-bind:class: 用于绑定对应的样式对象(**一定得是对象()**) 
+				class对象值:有俩个值true和false
+				注意的是:经常改变样式的时候用computed-->
+
+
+
+		
+		
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+	<!-- -->
+</body>
+</html>

@@ -1,0 +1,9 @@
+1.node -v
+2.npm -v
+查看是否已经安装
+3.搭建脚手价
+4.可在vue官网 安装 命令行工具 跳转页面安装国内镜像  安装的时候在前面加sudo 全局安装
+	sudo cnpm install --global vue-cli 用这一行
+5.检测 vue -V 这里的第二个v大写
+6.vue init webpack 后面起个名字
+7. npm run dev   开一个8080的端口号
